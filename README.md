@@ -11,14 +11,17 @@ If installing on Windows, the path to the bin folder of the PostgreSQL folder (e
 
 ### Chinook Database
 The Chinook Database data was added to Postgres by downloading the recommended version "ChinookDatabase1.4_CompleteVersion.zip" from <https://chinookdatabase.codeplex.com/releases/view/55681>
+
 Upon completion of the download, the contents should be unzipped. Opening a command prompt navigate to the directory where the Chinook files were unzipped.
 Run the batch file CreatePostgreSql.bat to create the Chinook DB in Postgres.
 
 ## Python Environment
 to install the required packages you can simply run:
 ```pip install -r requirements.txt```
+
 using the requirements.txt file in the root directory
-If trying to install on windows you may need to download the appropriate wheel file for psycopg2 here: [http://www.lfd.uci.edu/~gohlke/pythonlibs/#psycopg]
+
+If trying to install on windows you may need to download the appropriate wheel file for psycopg2 here: http://www.lfd.uci.edu/~gohlke/pythonlibs/#psycopg
 ```pip install <the wheel file you download based on your version>```
 
 
