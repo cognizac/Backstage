@@ -24,7 +24,9 @@ to install the required packages you can simply run:
 
 using the requirements.txt file in the root directory
 
-If trying to install on windows you may need to download the appropriate wheel file for psycopg2 here: http://www.lfd.uci.edu/~gohlke/pythonlibs/#psycopg  
+If trying to install on windows you may need to download the appropriate wheel file for psycopg2 here:  
+http://www.lfd.uci.edu/~gohlke/pythonlibs/#psycopg  
+then use  
 ```pip install <the wheel file you download based on your version>```
 
 ## Running the script
