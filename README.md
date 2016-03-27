@@ -18,7 +18,7 @@ Upon completion of the download, the contents should be unzipped. Open a command
 Run the batch file CreatePostgreSql.bat to create the Chinook DB in Postgres.
 
 ## Python Environment
-to install the required packages you can simply run:
+to install the required packages you can simply run:  
 ```pip install -r requirements.txt```
 
 using the requirements.txt file in the root directory
