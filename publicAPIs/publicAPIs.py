@@ -16,6 +16,7 @@ def getWeather(date, latlon):
     """
     Use the Historical API at worldweatheronline.com to return weather conditions for a latlon and date.
     """
+    #todo: Handle case when API call returns an error
     if not isinstance(date, datetime.datetime) or not isinstance(latlon, tuple):
         raise ValueError
     elif not isinstance(latlon[0], float) or not isinstance(latlon[1], float):

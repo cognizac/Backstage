@@ -39,3 +39,4 @@ You can run the script to download the data and produce correlational plots with
 if you would like to download the data from the web, edit line 2 of the settings.cfg to read:  
 ```use_API = true```  
 Otherwise, the script will load a pickle file containing the data. Keep in mind this is using a free trial for the weather API so it's best to use the included file.
+However, after 2016-03-27 20:00 EST there should be enough API calls available to complete the download again.
