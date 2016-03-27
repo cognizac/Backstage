@@ -32,5 +32,6 @@ You can run the script to download the data and produce correlational plots with
 ```python data_supplementation.py```
 
 if you would like to download the data from the web, edit line 13 of data_supplementation.py to read:  
-```use_API = True```
-
+```use_API = True```  
+Otherwise, the script will load a pickle file containing the data. Keep in mind this is using a free trial for the weather  
+API so it's best to use the included file.
