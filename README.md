@@ -12,9 +12,10 @@ If installing on Windows, the path to the bin folder of the PostgreSQL folder (e
 You must edit the file /database/postgres.py to use the correct password for the "postgres" user at line 3.
 
 ### Chinook Database
-The Chinook Database data was added to Postgres by downloading the recommended version "ChinookDatabase1.4_CompleteVersion.zip" from <https://chinookdatabase.codeplex.com/releases/view/55681>
+The Chinook Database data was added to Postgres by downloading the recommended version "ChinookDatabase1.4_CompleteVersion.zip"  
+from <https://chinookdatabase.codeplex.com/releases/view/55681>
 
-Upon completion of the download, the contents should be unzipped. Open a command prompt navigate to the directory where the Chinook files were unzipped.
+Upon completion of the download, the contents should be unzipped. Open a command prompt navigate to the directory where the Chinook files were unzipped.  
 Run the batch file CreatePostgreSql.bat to create the Chinook DB in Postgres.
 
 ## Python Environment
@@ -23,13 +24,13 @@ to install the required packages you can simply run:
 
 using the requirements.txt file in the root directory
 
-If trying to install on windows you may need to download the appropriate wheel file for psycopg2 here: http://www.lfd.uci.edu/~gohlke/pythonlibs/#psycopg
+If trying to install on windows you may need to download the appropriate wheel file for psycopg2 here: http://www.lfd.uci.edu/~gohlke/pythonlibs/#psycopg  
 ```pip install <the wheel file you download based on your version>```
 
 ## Running the script
-You can run the script to download the data and produce correlational plots with
+You can run the script to download the data and produce correlational plots with  
 ```python data_supplementation.py```
 
-if you would like to download the data from the web, edit line 13 of data_supplementation.py to read:
+if you would like to download the data from the web, edit line 13 of data_supplementation.py to read:  
 ```use_API = True```
 
