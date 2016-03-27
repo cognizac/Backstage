@@ -1,6 +1,14 @@
 import psycopg2
+import ConfigParser
 
-conn = psycopg2.connect(user='postgres', database='Chinook', password='pgpass')
+config = ConfigParser.RawConfigParser()
+config.read('settings.cfg')
+
+user = config.get('Postgres', 'user')
+password = config.get('Postgres', 'password')
+database = config.get('Postgres', 'dbname')
+
+conn = psycopg2.connect(user=user, database=database, password=password)
 conn.autocommit = True
 
 cur = conn.cursor()

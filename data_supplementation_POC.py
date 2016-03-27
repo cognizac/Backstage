@@ -1,5 +1,4 @@
-import psycopg2
-import time, cPickle, requests
+import time, cPickle, requests, ConfigParser
 
 import numpy as np
 import pandas as pd
@@ -9,8 +8,10 @@ from matplotlib import pyplot as plt
 from publicAPIs import getLatLon, getWeather
 from database.postgres import getQuery
 
-#Skip loading the data below by setting use_API = False
-use_API = False
+#Skip loading the data below by setting use_API = False in settings.cfg
+config = ConfigParser.RawConfigParser()
+config.read('settings.cfg')
+use_API = config.getboolean('Main', 'use_API')
 
 if use_API:
     invoices = getQuery('select * from "Invoice"')
@@ -60,7 +61,8 @@ df['weather_state'] = df.weather_desc.apply(lambda x: weather_states(x))
 df['precipitation'] = df.weather_json.apply(lambda x: float(x['data']['weather'][0]['hourly'][0]['precipMM']))
 df['FeelsLikeF'] = df.weather_json.apply(lambda x: float(x['data']['weather'][0]['hourly'][0]['FeelsLikeF']))
 
-pd.value_counts(df.weather_state)
+print "Count of Each Weather State:"
+print pd.value_counts(df.weather_state)
 
 fig, ax = plt.subplots(figsize=(8, 8))
 plot = sb.violinplot(x='weather_state', y='total', data=df, ax=ax)
@@ -75,5 +77,7 @@ g.map_upper(plt.scatter)
 g.map_diag(sb.kdeplot, lw=3)
 g.savefig('correlations.png')
 
-print 'Plots exported to root directory as mean_diff.png and correlations.png'
+df.to_csv('final_data.csv')
 
+print 'Plots exported to root directory as mean_diff.png and correlations.png'
+print 'Data exported to root directory as final_data.csv'
