@@ -12,7 +12,7 @@ If installing on Windows, the path to the bin folder of the PostgreSQL folder (e
 ### Chinook Database
 The Chinook Database data was added to Postgres by downloading the recommended version "ChinookDatabase1.4_CompleteVersion.zip" from <https://chinookdatabase.codeplex.com/releases/view/55681>
 
-Upon completion of the download, the contents should be unzipped. Opening a command prompt navigate to the directory where the Chinook files were unzipped.
+Upon completion of the download, the contents should be unzipped. Open a command prompt navigate to the directory where the Chinook files were unzipped.
 Run the batch file CreatePostgreSql.bat to create the Chinook DB in Postgres.
 
 ## Python Environment
